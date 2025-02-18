@@ -3,14 +3,16 @@ import { HashMap } from "./hash-map.js";
 
 const list = new LinkedList();
 
-list.set("One", "Norway");
-
-list.set("One", "Norway again");
-
-list.set("Two", "Sweden");
+list.put("One", "Norway");
+list.put("One", "Norway again");
+list.put("Two", "Sweden");
 
 console.log(list);
 
 const hashMap = new HashMap();
 
-console.log(hashMap.hash("Belgium"));
+hashMap.set("apple", "sweet");
+hashMap.set("apple", "red");
+hashMap.set("banana", "yellow");
+
+console.log(hashMap);

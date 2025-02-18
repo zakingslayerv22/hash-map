@@ -3,7 +3,7 @@ export class LinkedList {
     this.head = null;
   }
 
-  set(key, value) {
+  put(key, value) {
     const newNode = new Node(key, value);
 
     if (!this.head) {
@@ -12,6 +12,7 @@ export class LinkedList {
       let currentNode = this.head;
 
       if (currentNode.key === key) {
+        //overwrite the value
         currentNode.value = value;
         return;
       }
@@ -19,6 +20,7 @@ export class LinkedList {
       while (currentNode.nextNode) {
         currentNode = currentNode.nextNode;
         if (currentNode.key === key) {
+          //overwrite the value
           currentNode.value = value;
           return;
         }
