@@ -30,4 +30,14 @@ export class HashMap {
 
     this.buckets[index].put(key, value);
   }
+
+  get(key) {
+    const index = this.hash(key);
+
+    if (!this.buckets[index]) return null;
+
+    const result = this.buckets[index].fetch(key);
+
+    return result;
+  }
 }

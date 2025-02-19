@@ -16,5 +16,9 @@ const hashMap = new HashMap();
 hashMap.set("apple", "sweet");
 hashMap.set("apple", "red");
 hashMap.set("banana", "yellow");
+hashMap.set("applu", "green");
+hashMap.set("ak", "white");
+
+console.log(hashMap.get("applu"));
 
 console.log(hashMap);
