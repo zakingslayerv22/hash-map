@@ -28,6 +28,21 @@ export class LinkedList {
       currentNode.nextNode = newNode;
     }
   }
+
+  fetch(key) {
+    let currentNode = this.head;
+
+    if (!currentNode) return;
+
+    if (currentNode.key == key) return currentNode.value;
+
+    while (currentNode) {
+      if (currentNode.key === key) return currentNode.value;
+
+      currentNode = currentNode.nextNode;
+    }
+    return null;
+  }
 }
 
 class Node {

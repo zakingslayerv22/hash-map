@@ -7,6 +7,8 @@ list.put("One", "Norway");
 list.put("One", "Norway again");
 list.put("Two", "Sweden");
 
+console.log(list.fetch("One"));
+
 console.log(list);
 
 const hashMap = new HashMap();
