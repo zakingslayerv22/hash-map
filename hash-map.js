@@ -40,4 +40,14 @@ export class HashMap {
 
     return result;
   }
+
+  has(key) {
+    const index = this.hash(key);
+
+    if (!this.buckets[index]) return false;
+
+    const result = this.buckets[index].exists(key);
+
+    return result;
+  }
 }

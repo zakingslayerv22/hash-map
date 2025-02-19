@@ -8,6 +8,7 @@ list.put("One", "Norway again");
 list.put("Two", "Sweden");
 
 console.log(list.fetch("One"));
+console.log(list.exists("Two"));
 
 console.log(list);
 
@@ -20,5 +21,7 @@ hashMap.set("applu", "green");
 hashMap.set("ak", "white");
 
 console.log(hashMap.get("applu"));
+
+console.log(hashMap.has("banana"));
 
 console.log(hashMap);

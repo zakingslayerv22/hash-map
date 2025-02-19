@@ -43,6 +43,21 @@ export class LinkedList {
     }
     return null;
   }
+
+  exists(key) {
+    let currentNode = this.head;
+
+    if (!currentNode) return;
+
+    if (currentNode.key == key) return true;
+
+    while (currentNode) {
+      if (currentNode.key === key) return true;
+
+      currentNode = currentNode.nextNode;
+    }
+    return false;
+  }
 }
 
 class Node {
