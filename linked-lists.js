@@ -18,7 +18,6 @@ export class LinkedList {
       }
 
       while (currentNode.nextNode) {
-        currentNode = currentNode.nextNode;
         if (currentNode.key === key) {
           //overwrite the value
           currentNode.value = value;
