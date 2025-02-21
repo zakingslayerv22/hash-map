@@ -58,6 +58,22 @@ export class LinkedList {
     }
     return false;
   }
+
+  size() {
+    let currentNode = this.head;
+    let nodeCount = 1;
+
+    if (!currentNode) {
+      nodeCount = 0;
+      return nodeCount;
+    }
+
+    while (currentNode.nextNode) {
+      nodeCount += 1;
+      currentNode = currentNode.nextNode;
+    }
+    return nodeCount;
+  }
 }
 
 class Node {
