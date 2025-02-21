@@ -26,4 +26,6 @@ console.log(hashMap.get("applu"));
 
 console.log(hashMap.has("banana"));
 
+console.log(hashMap.remove("banana"));
+
 console.log(hashMap);

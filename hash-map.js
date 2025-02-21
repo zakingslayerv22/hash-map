@@ -50,4 +50,14 @@ export class HashMap {
 
     return result;
   }
+
+  remove(key) {
+    const index = this.hash(key);
+
+    if (!this.buckets[index]) return false;
+
+    const result = this.buckets[index].removeNode(key);
+
+    return result;
+  }
 }
