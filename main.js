@@ -8,7 +8,9 @@ list.put("One", "Norway again");
 list.put("Two", "Sweden");
 
 console.log(list.fetch("One"));
-console.log(list.exists("Two"));
+console.log(list.exists("Three"));
+
+console.log(list.removeNode("Two"));
 
 console.log(list);
 

@@ -74,6 +74,36 @@ export class LinkedList {
     }
     return nodeCount;
   }
+
+  removeNode(key) {
+    let listSize = this.size();
+    let currentNode = this.head;
+    let previousNode;
+    let nextNode;
+
+    if (currentNode.key === key && listSize > 1) {
+      nextNode = currentNode.nextNode;
+      this.head = nextNode;
+      return true;
+    }
+
+    if (currentNode.key === key) {
+      this.head = null;
+      return true;
+    }
+
+    while (currentNode) {
+      nextNode = currentNode.nextNode;
+      if (currentNode.key === key) {
+        previousNode.nextNode = nextNode;
+        return true;
+      }
+      previousNode = currentNode;
+      currentNode = currentNode.nextNode;
+    }
+
+    return false;
+  }
 }
 
 class Node {
