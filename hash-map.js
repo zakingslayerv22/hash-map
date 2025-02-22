@@ -60,4 +60,14 @@ export class HashMap {
 
     return result;
   }
+
+  length() {
+    if (!this.buckets.length) return 0;
+
+    return this.buckets.reduce((count, list) => count + list.size(), 0);
+  }
+
+  clear() {
+    this.buckets = [];
+  }
 }
