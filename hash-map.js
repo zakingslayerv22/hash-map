@@ -78,4 +78,11 @@ export class HashMap {
   values() {
     return this.buckets.map((bucket) => bucket.getValues()).flat();
   }
+
+  entries() {
+    const keys = this.keys();
+    const values = this.values();
+
+    return keys.map((key, index) => [key, values[index]]);
+  }
 }
