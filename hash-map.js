@@ -70,4 +70,8 @@ export class HashMap {
   clear() {
     this.buckets = [];
   }
+
+  keys() {
+    return this.buckets.map((bucket) => bucket.getKeys()).flat();
+  }
 }
