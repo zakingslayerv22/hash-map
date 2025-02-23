@@ -104,6 +104,20 @@ export class LinkedList {
 
     return false;
   }
+
+  getKeys() {
+    let currentNode = this.head;
+    let listSize = this.size();
+    let keysArray = [];
+
+    while (listSize >= 1) {
+      keysArray.push(currentNode.key);
+      currentNode = currentNode.nextNode;
+      listSize -= 1;
+    }
+
+    return keysArray;
+  }
 }
 
 class Node {
