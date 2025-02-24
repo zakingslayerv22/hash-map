@@ -20,6 +20,29 @@ export class HashMap {
     return index;
   }
 
+  checkThreshold() {
+    const threshhold = this.capacity * this.loadFactor;
+    const length = this.length();
+
+    if (length > threshhold) {
+      return true;
+    }
+
+    return false;
+  }
+
+  rehash() {
+    this.capacity = this.capacity + this.capacity;
+    const entries = this.entries();
+
+    this.clear();
+
+    entries.map((entry) => {
+      const [key, value] = entry;
+      this.set(key, value);
+    });
+  }
+
   set(key, value) {
     const index = this.hash(key);
     if (!this.buckets[index]) {
