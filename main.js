@@ -1,31 +1,22 @@
-import { LinkedList } from "./linked-lists.js";
 import { HashMap } from "./hash-map.js";
 
-const list = new LinkedList();
+const test = new HashMap();
 
-list.put("One", "Norway");
-list.put("One", "Norway again");
-list.put("Two", "Sweden");
+test.set("apple", "red");
+test.set("banana", "yellow");
+test.set("carrot", "orange");
+test.set("dog", "brown");
+test.set("elephant", "gray");
+test.set("frog", "green");
+test.set("grape", "purple");
+test.set("hat", "black");
+test.set("ice cream", "white");
+test.set("jacket", "blue");
+test.set("kite", "pink");
+test.set("lion", "golden");
 
-console.log(list.fetch("One"));
-console.log(list.exists("Three"));
+test.set("moon", "silver");
 
-console.log(list.removeNode("Two"));
+console.log(test.length());
 
-console.log(list);
-
-const hashMap = new HashMap();
-
-hashMap.set("apple", "sweet");
-hashMap.set("apple", "red");
-hashMap.set("banana", "yellow");
-hashMap.set("applu", "green");
-hashMap.set("ak", "white");
-
-console.log(hashMap.get("applu"));
-
-console.log(hashMap.has("banana"));
-
-console.log(hashMap.remove("banana"));
-
-console.log(hashMap);
+console.log(test);

@@ -45,6 +45,7 @@ export class HashMap {
 
   set(key, value) {
     const index = this.hash(key);
+
     if (!this.buckets[index]) {
       //create a new linked list at this index
       //make it a linked list
@@ -52,6 +53,10 @@ export class HashMap {
     }
 
     this.buckets[index].put(key, value);
+
+    const reachedThreshold = this.checkThreshold();
+
+    if (reachedThreshold) this.rehash();
   }
 
   get(key) {
